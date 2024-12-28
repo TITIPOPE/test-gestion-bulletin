@@ -1,4 +1,4 @@
-// // controllers/NoteController.js
+// controllers/NoteController.js
 
 const { Note,Matiere,Userapp,Session } = require('../models');
 // Ajouter une note

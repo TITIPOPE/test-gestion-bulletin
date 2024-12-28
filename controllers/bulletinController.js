@@ -27,7 +27,7 @@ exports.createBulletin = async (req, res) => {
       const total = notes.reduce((sum, note) => sum + note.note, 0);
       const average = total / notes.length;
       console.log("Notes trouvées :", average);
-      // Créer un nouveau bulletin
+      // Créer un nouveau bulletins
       const newBulletin = await Bulletin.create({
         userappId,
         sessionId,
