@@ -24,63 +24,92 @@ Gestion Bulletin is a web application designed to manage student grades, subject
    ```bash
    git clone https://github.com/TITIPOPE/gestion-bulletin.git
    cd gestion-bulletin
-Install dependencies
+# Project Setup and Usage Guide
 
-bash
+## Install Dependencies
 
-Run
+Run the following command to install dependencies:
 
+```bash
 npm install
-Set up the database
+```
 
-Create a MySQL database and update the config/config.json file with your database credentials.
-Run migrations
+## Set Up the Database
 
-bash
-Insert Code
-Run
-Copy code
+1. Create a MySQL database.
+2. Update the `config/config.json` file with your database credentials.
+
+## Run Migrations
+
+Run the following command to migrate the database schema:
+
+```bash
 npx sequelize-cli db:migrate
-Start the application
+```
 
-bash
-Insert Code
-Run
-Copy code
+## Start the Application
+
+Run the following command to start the application:
+
+```bash
 npm start
-Access the application
-Open your browser and navigate to http://localhost:3000.
-Usage
-API Endpoints
-User Management
+```
 
-POST /api/userapps - Create a new user
-POST /api/userapps/login - User login
-GET /api/userapps - Get all users
-Subject Management
+## Access the Application
 
-POST /api/matieres - Create a new subject
-GET /api/matieres - Get all subjects
-Note Management
+Open your browser and navigate to [http://localhost:3000](http://localhost:3000).
 
-POST /api/notes - Create a new note
-GET /api/notes/:userId/:sessionId - Get notes for a specific student
-Session Management
+---
 
-POST /api/sessions - Create a new session
-GET /api/sessions - Get all sessions
-Bulletin Management
+## Usage
 
-POST /api/bulletins - Create a new bulletin
-GET /api/bulletins/:userId/:sessionId - Get bulletin for a specific student
-Contributing
+### API Endpoints
+
+#### User Management
+- **POST** `/api/userapps` - Create a new user.
+- **POST** `/api/userapps/login` - User login.
+- **GET** `/api/userapps` - Get all users.
+
+#### Subject Management
+- **POST** `/api/matieres` - Create a new subject.
+- **GET** `/api/matieres` - Get all subjects.
+
+#### Note Management
+- **POST** `/api/notes` - Create a new note.
+- **GET** `/api/notes/:userId/:sessionId` - Get notes for a specific student.
+
+#### Session Management
+- **POST** `/api/sessions` - Create a new session.
+- **GET** `/api/sessions` - Get all sessions.
+
+#### Bulletin Management
+- **POST** `/api/bulletins` - Create a new bulletin.
+- **GET** `/api/bulletins/:userId/:sessionId` - Get bulletin for a specific student.
+
+---
+
+## Contributing
+
 Contributions are welcome! Please follow these steps:
 
-Fork the repository
-Create a new branch (git checkout -b feature/YourFeature)
-Make your changes
-Commit your changes (git commit -m 'Add some feature')
-Push to the branch (git push origin feature/YourFeature)
-Open a pull request
-License
-This project is licensed under the ISC License - see the LICENSE file for details.
+1. Fork the repository.
+2. Create a new branch:
+   ```bash
+   git checkout -b feature/YourFeature
+   ```
+3. Make your changes.
+4. Commit your changes:
+   ```bash
+   git commit -m 'Add some feature'
+   ```
+5. Push to the branch:
+   ```bash
+   git push origin feature/YourFeature
+   ```
+6. Open a pull request.
+
+---
+
+## License
+
+This project is licensed under the ISC License. See the [LICENSE](LICENSE) file for details.
