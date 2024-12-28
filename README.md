@@ -49,7 +49,6 @@ Run
 Copy code
 npm start
 Access the application
-
 Open your browser and navigate to http://localhost:3000.
 Usage
 API Endpoints

@@ -1,4 +1,5 @@
-// // controllers/NoteController.j
+// // controllers/NoteController.js
+
 const { Note,Matiere,Userapp,Session } = require('../models');
 // Ajouter une note
 exports.createNote = async (req, res) => {
