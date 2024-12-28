@@ -67,49 +67,56 @@ Open your browser and navigate to [http://localhost:3000](http://localhost:3000)
 
 #### User Management
 - **POST** `/api/userapps` - Create a new user.
-- **POST** `/api/userapps/login` - User login.
+body
+    {
+        "name": "samir",
+        "email": "samir@example.com",
+        "role": "teacher",
+        "password": "6657454745"
+    }
 - **GET** `/api/userapps` - Get all users.
 
 #### Subject Management
 - **POST** `/api/matieres` - Create a new subject.
+body
+    {
+    "name": "pc"
+    }
 - **GET** `/api/matieres` - Get all subjects.
 
 #### Note Management
 - **POST** `/api/notes` - Create a new note.
+body
+    {
+    "userappId": 7,  // ID for Jean Dupont
+    "matiereId": 1,  // ID for Mathématiques
+    "sessionId": 1,  // ID for the "Session d'examen de décembre"
+    "note": 14,
+    "maxGrade": 20
+    }
 - **GET** `/api/notes/:userId/:sessionId` - Get notes for a specific student.
 
 #### Session Management
 - **POST** `/api/sessions` - Create a new session.
+body
+    {
+  "name": "Session d'examen de décembre",
+  "startDate": "2024-12-01",
+  "endDate": "2024-12-10"
+  }
+
 - **GET** `/api/sessions` - Get all sessions.
 
 #### Bulletin Management
 - **POST** `/api/bulletins` - Create a new bulletin.
+body
+    {
+  "userappId": 7,
+  "sessionId": 1
+    }
 - **GET** `/api/bulletins/:userId/:sessionId` - Get bulletin for a specific student.
 
 ---
-
-## Contributing
-
-Contributions are welcome! Please follow these steps:
-
-1. Fork the repository.
-2. Create a new branch:
-   ```bash
-   git checkout -b feature/YourFeature
-   ```
-3. Make your changes.
-4. Commit your changes:
-   ```bash
-   git commit -m 'Add some feature'
-   ```
-5. Push to the branch:
-   ```bash
-   git push origin feature/YourFeature
-   ```
-6. Open a pull request.
-
----
-
 ## License
 
 This project is licensed under the ISC License. See the [LICENSE](LICENSE) file for details.
